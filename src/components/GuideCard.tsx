@@ -14,7 +14,10 @@ interface GuideCardProps {
 
 export const GuideCard = ({ icon, title, description, status, link, requiresEmail = false }: GuideCardProps) => {
   const [showEmailModal, setShowEmailModal] = useState(false);
-  const [hasAccess, setHasAccess] = useState(false);
+  const [hasAccess, setHasAccess] = useState(() => {
+    // Check if user already has access
+    return localStorage.getItem('hasEmailAccess') === 'true';
+  });
 
   const handleCardClick = (e: React.MouseEvent) => {
     if (requiresEmail && !hasAccess && status === "available") {
@@ -69,6 +72,7 @@ export const GuideCard = ({ icon, title, description, status, link, requiresEmai
             onClose={() => setShowEmailModal(false)}
             onSubmit={handleEmailSubmit}
             guideName={title}
+            redirectTo={link}
           />
         </>
       );

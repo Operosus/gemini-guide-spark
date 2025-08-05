@@ -111,7 +111,7 @@ const Index = () => {
         </a>
         <h1 className="text-2xl text-text-primary mb-2 flex items-center justify-center gap-3">
           <img 
-            src="/lovable-uploads/7c51181d-f3f9-4409-a362-673eaca665f9.png" 
+            src="/lovable-uploads/4045ed6a-6e05-4f77-acd2-df397b4d5640.png" 
             alt="Gemini Logo" 
             className="h-8 w-auto"
           />
