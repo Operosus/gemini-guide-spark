@@ -109,15 +109,15 @@ const Index = () => {
             className="h-16 w-auto group-hover:scale-105 transition-transform"
           />
         </a>
-        <h1 className="text-2xl text-text-secondary mb-2 flex items-center justify-center gap-3">
+        <h1 className="text-2xl text-text-primary mb-2 flex items-center justify-center gap-3">
           <img 
-            src="/lovable-uploads/845a0eeb-2280-4900-a81e-33315101573c.png" 
+            src="/lovable-uploads/7c51181d-f3f9-4409-a362-673eaca665f9.png" 
             alt="Gemini Logo" 
             className="h-8 w-auto"
           />
           AI Guide Collection
         </h1>
-        <p className="text-text-secondary max-w-2xl mx-auto leading-relaxed">
+        <p className="text-text-primary max-w-2xl mx-auto leading-relaxed">
           Comprehensive guides to help your team master Google's Gemini AI suite. 
           From basic prompting to advanced features, get started quickly with practical, 
           copy-paste ready templates and best practices.
@@ -134,7 +134,7 @@ const Index = () => {
         <section className="mb-12">
           <div className="text-center mb-8">
             <h2 className="text-3xl font-semibold text-text-primary mb-4">Google Workspace Integration</h2>
-            <p className="text-text-secondary max-w-2xl mx-auto">
+            <p className="text-text-primary max-w-2xl mx-auto">
               Learn how to use Gemini within your existing Google Workspace applications 
               for seamless productivity improvements.
             </p>
@@ -149,7 +149,7 @@ const Index = () => {
       </main>
 
       <footer className="text-center glass-card rounded-2xl p-8">
-        <p className="text-text-secondary mb-4">
+        <p className="text-text-primary mb-4">
           Created by the team at Operosus to help organisations boost productivity with AI.
         </p>
         <a 

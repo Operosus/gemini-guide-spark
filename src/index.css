@@ -38,10 +38,10 @@
     --destructive: 0 63% 31%;
     --destructive-foreground: 0 0% 100%;
     
-    /* Text hierarchy */
-    --text-primary: 0 0% 100%;
-    --text-secondary: 196 58% 86%;
-    --text-muted: 224 30% 60%;
+    /* Text hierarchy - using dark blue for readability */
+    --text-primary: 224 91% 25%; /* Dark Blue #071C73 */
+    --text-secondary: 224 91% 25%; /* Dark Blue #071C73 */
+    --text-muted: 224 60% 45%; /* Lighter version of dark blue */
     
     /* Status indicators */
     --status-available: 142 76% 36%;

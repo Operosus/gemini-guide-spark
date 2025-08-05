@@ -56,8 +56,12 @@ export const EmailModal = ({ isOpen, onClose, onSubmit, guideName }: EmailModalP
   };
 
   return (
-    <Dialog open={isOpen} onOpenChange={onClose} modal={true}>
-      <DialogContent className="sm:max-w-md glass-card border-white/20 fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-50">
+    <Dialog open={isOpen} onOpenChange={onClose}>
+      <DialogContent 
+        className="sm:max-w-md glass-card border-white/20 data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 data-[state=closed]:slide-out-to-left-1/2 data-[state=closed]:slide-out-to-top-[48%] data-[state=open]:slide-in-from-left-1/2 data-[state=open]:slide-in-from-top-[48%] fixed left-[50%] top-[50%] z-50 grid w-full max-w-lg translate-x-[-50%] translate-y-[-50%] gap-4 border bg-background p-6 shadow-lg duration-200"
+        onPointerDownOutside={(e) => e.preventDefault()}
+        onInteractOutside={(e) => e.preventDefault()}
+      >
         <DialogHeader>
           <DialogTitle className="text-2xl font-semibold text-center text-text-primary">
             🚀 Unlock Premium Guides
@@ -66,7 +70,7 @@ export const EmailModal = ({ isOpen, onClose, onSubmit, guideName }: EmailModalP
         
         <div className="space-y-4 py-4">
           <div className="text-center space-y-2">
-            <p className="text-text-secondary">
+            <p className="text-text-primary">
               Get instant access to "{guideName}" and all other premium guides
             </p>
             <p className="text-sm text-text-muted">
@@ -83,7 +87,7 @@ export const EmailModal = ({ isOpen, onClose, onSubmit, guideName }: EmailModalP
                 placeholder="your@email.com"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
-                className="bg-white/10 border-white/20 text-white placeholder:text-white/60"
+                className="bg-white/10 border-white/20 text-text-primary placeholder:text-text-muted"
                 required
               />
             </div>
@@ -93,7 +97,7 @@ export const EmailModal = ({ isOpen, onClose, onSubmit, guideName }: EmailModalP
                 type="button"
                 variant="outline"
                 onClick={onClose}
-                className="flex-1 border-white/30 text-white hover:bg-white/10"
+                className="flex-1 border-white/30 text-text-primary hover:bg-white/10"
               >
                 Cancel
               </Button>
