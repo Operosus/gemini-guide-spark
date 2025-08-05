@@ -15,42 +15,48 @@ const Index = () => {
       title: "Create a Gem",
       description: "Build custom AI assistants for repetitive tasks. Learn how to create, manage, and add knowledge to your personal team of AI experts.",
       status: "available" as const,
-      link: "/guide/create-gem"
+      link: "/guide/create-gem",
+      requiresEmail: true
     },
     {
       icon: "🎨",
       title: "Generate an Image",
       description: "Create professional images with Imagen 4. Includes prompt templates, style keywords, and tips for making changes and improvements.",
       status: "available" as const,
-      link: "/guide/generate-image"
+      link: "/guide/generate-image",
+      requiresEmail: true
     },
     {
       icon: "🔍",
       title: "Run Deep Research",
       description: "Conduct comprehensive research in minutes. Learn how to control report length, create different outputs, and get actionable insights.",
       status: "available" as const,
-      link: "/guide/deep-research"
+      link: "/guide/deep-research",
+      requiresEmail: true
     },
     {
       icon: "📝",
       title: "Using Canvas",
       description: "Collaborate with AI in real-time. Create documents, build apps, and develop interactive content in Gemini's shared workspace.",
       status: "available" as const,
-      link: "/guide/canvas"
+      link: "/guide/canvas",
+      requiresEmail: true
     },
     {
       icon: "📊",
       title: "Analysing Data",
       description: "Extract insights from spreadsheets and files using natural language. Includes question types, visualisation requests, and analysis techniques.",
       status: "available" as const,
-      link: "/guide/analysing-data"
+      link: "/guide/analysing-data",
+      requiresEmail: true
     },
     {
       icon: "📋",
       title: "Taking Notes",
       description: "Automate meeting notes, organise information, and transcribe handwritten notes. Includes connected app integration and enhancement techniques.",
       status: "available" as const,
-      link: "/guide/taking-notes"
+      link: "/guide/taking-notes",
+      requiresEmail: true
     }
   ];
 
@@ -96,8 +102,15 @@ const Index = () => {
   return (
     <PageLayout>
       <header className="text-center mb-12 glass-card rounded-2xl p-12">
-        <a href="https://www.operosus.com" className="text-4xl font-bold text-primary mb-4 block no-underline hover:text-primary-variant transition-colors">
-          Operosus
+        <a href="https://www.operosus.com" className="flex items-center justify-center gap-3 mb-4 no-underline group">
+          <img 
+            src="/lovable-uploads/845a0eeb-2280-4900-a81e-33315101573c.png" 
+            alt="Operosus Logo" 
+            className="h-12 w-auto"
+          />
+          <span className="text-4xl font-bold text-primary group-hover:text-primary-variant transition-colors">
+            Operosus
+          </span>
         </a>
         <h1 className="text-2xl text-text-secondary mb-2">Gemini AI Guide Collection</h1>
         <p className="text-text-secondary max-w-2xl mx-auto leading-relaxed">

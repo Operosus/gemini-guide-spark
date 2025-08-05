@@ -1,5 +1,7 @@
 import { Link } from "react-router-dom";
 import { StatusBadge } from "./StatusBadge";
+import { useState } from "react";
+import { EmailModal } from "./EmailModal";
 
 interface GuideCardProps {
   icon: string;
@@ -7,9 +9,25 @@ interface GuideCardProps {
   description: string;
   status: "available" | "coming-soon";
   link?: string;
+  requiresEmail?: boolean;
 }
 
-export const GuideCard = ({ icon, title, description, status, link }: GuideCardProps) => {
+export const GuideCard = ({ icon, title, description, status, link, requiresEmail = false }: GuideCardProps) => {
+  const [showEmailModal, setShowEmailModal] = useState(false);
+  const [hasAccess, setHasAccess] = useState(false);
+
+  const handleCardClick = (e: React.MouseEvent) => {
+    if (requiresEmail && !hasAccess && status === "available") {
+      e.preventDefault();
+      setShowEmailModal(true);
+    }
+  };
+
+  const handleEmailSubmit = (email: string) => {
+    // Here you would save to Supabase
+    console.log("Email submitted:", email);
+    setHasAccess(true);
+  };
   const content = (
     <>
       <div className="w-15 h-15 rounded-xl flex items-center justify-center mb-6 text-2xl bg-gradient-primary text-white">
@@ -26,7 +44,7 @@ export const GuideCard = ({ icon, title, description, status, link }: GuideCardP
       </p>
       {status === "available" && link ? (
         <span className="inline-block gradient-button px-6 py-3 rounded-lg font-medium text-white no-underline">
-          View Guide
+          {requiresEmail && !hasAccess ? "Get Access" : "View Guide"}
         </span>
       ) : (
         <span className="inline-block px-6 py-3 bg-muted text-muted-foreground rounded-lg cursor-not-allowed opacity-60">
@@ -37,6 +55,25 @@ export const GuideCard = ({ icon, title, description, status, link }: GuideCardP
   );
 
   if (status === "available" && link) {
+    if (requiresEmail && !hasAccess) {
+      return (
+        <>
+          <div 
+            className="glass-card rounded-2xl p-8 block no-underline cursor-pointer hover:transform hover:scale-105 transition-all"
+            onClick={handleCardClick}
+          >
+            {content}
+          </div>
+          <EmailModal
+            isOpen={showEmailModal}
+            onClose={() => setShowEmailModal(false)}
+            onSubmit={handleEmailSubmit}
+            guideName={title}
+          />
+        </>
+      );
+    }
+    
     return (
       <Link to={link} className="glass-card rounded-2xl p-8 block no-underline">
         {content}
