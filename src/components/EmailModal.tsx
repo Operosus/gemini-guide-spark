@@ -56,8 +56,8 @@ export const EmailModal = ({ isOpen, onClose, onSubmit, guideName }: EmailModalP
   };
 
   return (
-    <Dialog open={isOpen} onOpenChange={onClose}>
-      <DialogContent className="sm:max-w-md glass-card border-white/20">
+    <Dialog open={isOpen} onOpenChange={onClose} modal={true}>
+      <DialogContent className="sm:max-w-md glass-card border-white/20 fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-50">
         <DialogHeader>
           <DialogTitle className="text-2xl font-semibold text-center text-text-primary">
             🚀 Unlock Premium Guides

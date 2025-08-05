@@ -102,17 +102,21 @@ const Index = () => {
   return (
     <PageLayout>
       <header className="text-center mb-12 glass-card rounded-2xl p-12">
-        <a href="https://www.operosus.com" className="flex items-center justify-center gap-3 mb-4 no-underline group">
+        <a href="https://www.operosus.com" className="flex justify-center mb-6 no-underline group">
           <img 
             src="/lovable-uploads/845a0eeb-2280-4900-a81e-33315101573c.png" 
             alt="Operosus Logo" 
-            className="h-12 w-auto"
+            className="h-16 w-auto group-hover:scale-105 transition-transform"
           />
-          <span className="text-4xl font-bold text-primary group-hover:text-primary-variant transition-colors">
-            Operosus
-          </span>
         </a>
-        <h1 className="text-2xl text-text-secondary mb-2">Gemini AI Guide Collection</h1>
+        <h1 className="text-2xl text-text-secondary mb-2 flex items-center justify-center gap-3">
+          <img 
+            src="/lovable-uploads/845a0eeb-2280-4900-a81e-33315101573c.png" 
+            alt="Gemini Logo" 
+            className="h-8 w-auto"
+          />
+          AI Guide Collection
+        </h1>
         <p className="text-text-secondary max-w-2xl mx-auto leading-relaxed">
           Comprehensive guides to help your team master Google's Gemini AI suite. 
           From basic prompting to advanced features, get started quickly with practical, 
@@ -129,8 +133,8 @@ const Index = () => {
 
         <section className="mb-12">
           <div className="text-center mb-8">
-            <h2 className="text-3xl font-semibold text-white mb-4">Google Workspace Integration</h2>
-            <p className="text-white/80 max-w-2xl mx-auto">
+            <h2 className="text-3xl font-semibold text-text-primary mb-4">Google Workspace Integration</h2>
+            <p className="text-text-secondary max-w-2xl mx-auto">
               Learn how to use Gemini within your existing Google Workspace applications 
               for seamless productivity improvements.
             </p>
@@ -145,12 +149,12 @@ const Index = () => {
       </main>
 
       <footer className="text-center glass-card rounded-2xl p-8">
-        <p className="text-white/80 mb-4">
+        <p className="text-text-secondary mb-4">
           Created by the team at Operosus to help organisations boost productivity with AI.
         </p>
         <a 
           href="https://www.operosus.com" 
-          className="inline-block px-6 py-2 border border-white/30 text-white rounded-lg hover:bg-white/10 transition-colors no-underline"
+          className="inline-block px-6 py-2 border border-primary/30 text-primary rounded-lg hover:bg-primary/10 transition-colors no-underline"
         >
           Visit Operosus.com
         </a>
