@@ -113,7 +113,7 @@ const Index = () => {
           <img 
             src="/lovable-uploads/4045ed6a-6e05-4f77-acd2-df397b4d5640.png" 
             alt="Gemini Logo" 
-            className="h-8 w-auto"
+            className="h-24 w-auto"
           />
           AI Guide Collection
         </h1>

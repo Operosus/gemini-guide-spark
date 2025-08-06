@@ -80,17 +80,17 @@ export const EmailModal = ({ isOpen, onClose, onSubmit, guideName, redirectTo }:
         
         <div className="space-y-4 py-4">
           <div className="text-center space-y-2">
-            <p className="text-white">
+            <p className="text-[#071C73]">
               Get instant access to "{guideName}" and all other premium guides
             </p>
-            <p className="text-sm text-white/80">
+            <p className="text-sm text-[#071C73]/80">
               No spam, just value. One email = lifetime access to all guides.
             </p>
           </div>
           
           <form onSubmit={handleSubmit} className="space-y-4">
             <div className="space-y-2">
-              <Label htmlFor="email" className="text-white">Email address</Label>
+              <Label htmlFor="email" className="text-[#071C73]">Email address</Label>
               <Input
                 id="email"
                 type="email"
@@ -121,7 +121,7 @@ export const EmailModal = ({ isOpen, onClose, onSubmit, guideName, redirectTo }:
             </div>
           </form>
           
-          <div className="text-xs text-white/60 text-center">
+          <div className="text-xs text-[#071C73]/60 text-center">
             Created by Operosus to help teams master AI productivity
           </div>
         </div>
