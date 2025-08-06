@@ -133,8 +133,8 @@ const Index = () => {
 
         <section className="mb-12">
           <div className="text-center mb-8">
-            <h2 className="text-3xl font-semibold text-text-primary mb-4">Google Workspace Integration</h2>
-            <p className="text-text-primary max-w-2xl mx-auto">
+            <h2 className="text-3xl font-semibold text-white mb-4">Google Workspace Integration</h2>
+            <p className="text-white max-w-2xl mx-auto">
               Learn how to use Gemini within your existing Google Workspace applications 
               for seamless productivity improvements.
             </p>
