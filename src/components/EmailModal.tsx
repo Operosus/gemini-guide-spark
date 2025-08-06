@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { useToast } from "@/hooks/use-toast";
+import { supabase } from "@/integrations/supabase/client";
 
 interface EmailModalProps {
   isOpen: boolean;
@@ -33,9 +34,14 @@ export const EmailModal = ({ isOpen, onClose, onSubmit, guideName, redirectTo }:
     setIsLoading(true);
     
     try {
-      // Here you would normally save to Supabase
-      // For now, we'll just simulate success
-      await new Promise(resolve => setTimeout(resolve, 1000));
+      // Save email to Supabase
+      const { error } = await supabase
+        .from('Gemini Guides Leads')
+        .insert([{ email }]);
+
+      if (error) {
+        throw error;
+      }
       
       // Store access in localStorage
       localStorage.setItem('hasEmailAccess', 'true');
