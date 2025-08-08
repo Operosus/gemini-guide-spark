@@ -98,8 +98,8 @@ export default function PromptEngineeringGuide() {
                 <h3 className="text-xl font-semibold text-text-primary mb-4">1. Basic Instruction Prompt</h3>
                 
                 <h4 className="font-semibold text-text-primary mb-2">Template</h4>
-                <div className="bg-gray-100 p-4 rounded-lg mb-4 font-mono text-sm">
-                  <pre className="whitespace-pre-wrap">You are a [ROLE].
+                <div className="bg-white/80 p-4 rounded-lg mb-4 font-mono text-sm">
+                  <pre className="whitespace-pre-wrap text-text-primary">You are a [ROLE].
 
 Context:
 [RELEVANT BACKGROUND]
@@ -117,8 +117,8 @@ Constraints:
                 </div>
 
                 <h4 className="font-semibold text-text-primary mb-2">Example (Marketing)</h4>
-                <div className="bg-green-50 p-4 rounded-lg font-mono text-sm">
-                  <pre className="whitespace-pre-wrap">You are a digital copywriter.
+                <div className="bg-white/80 p-4 rounded-lg font-mono text-sm">
+                  <pre className="whitespace-pre-wrap text-text-primary">You are a digital copywriter.
 
 Context:
 Our company, EcoSip, sells reusable coffee cups. We are running a summer social-media push aimed at eco-conscious Gen Z buyers.
@@ -141,8 +141,8 @@ Do not use hashtags; mention "EcoSip" in every caption.</pre>
                 <p className="text-text-secondary mb-4">Use when you want the model to mimic style or give comparable outputs.</p>
                 
                 <h4 className="font-semibold text-text-primary mb-2">Template</h4>
-                <div className="bg-gray-100 p-4 rounded-lg mb-4 font-mono text-sm">
-                  <pre className="whitespace-pre-wrap">You are a [ROLE].
+                <div className="bg-white/80 p-4 rounded-lg mb-4 font-mono text-sm">
+                  <pre className="whitespace-pre-wrap text-text-primary">You are a [ROLE].
 
 Task:
 Generate [NUMBER] examples similar in style to the ones below.
@@ -158,8 +158,8 @@ Constraints:
                 </div>
 
                 <h4 className="font-semibold text-text-primary mb-2">Filled-In Example (Customer Support Macros)</h4>
-                <div className="bg-green-50 p-4 rounded-lg font-mono text-sm">
-                  <pre className="whitespace-pre-wrap">You are a customer-support specialist.
+                <div className="bg-white/80 p-4 rounded-lg font-mono text-sm">
+                  <pre className="whitespace-pre-wrap text-text-primary">You are a customer-support specialist.
 
 Task:
 Generate 3 canned responses in the same style as the examples below, for customers asking for a shipping-status update.
@@ -181,8 +181,8 @@ Constraints:
                 <p className="text-text-secondary mb-4">Great for complex reasoning where you want transparency.</p>
                 
                 <h4 className="font-semibold text-text-primary mb-2">Template</h4>
-                <div className="bg-gray-100 p-4 rounded-lg mb-4 font-mono text-sm">
-                  <pre className="whitespace-pre-wrap">You are a [ROLE]. Think through the problem step by step before answering.
+                <div className="bg-white/80 p-4 rounded-lg mb-4 font-mono text-sm">
+                  <pre className="whitespace-pre-wrap text-text-primary">You are a [ROLE]. Think through the problem step by step before answering.
 
 Problem:
 [QUESTION OR CHALLENGE]
@@ -191,8 +191,8 @@ After reasoning, provide a concise answer under the heading "Final Answer:".</pr
                 </div>
 
                 <h4 className="font-semibold text-text-primary mb-2">Filled-In Example (Finance Analysis)</h4>
-                <div className="bg-green-50 p-4 rounded-lg font-mono text-sm">
-                  <pre className="whitespace-pre-wrap">You are a financial analyst. Think through the problem step by step before answering.
+                <div className="bg-white/80 p-4 rounded-lg font-mono text-sm">
+                  <pre className="whitespace-pre-wrap text-text-primary">You are a financial analyst. Think through the problem step by step before answering.
 
 Problem:
 Our Q2 profit margin dropped from 18% to 12%. Identify the top three drivers using the data summary below and recommend one corrective action per driver.
@@ -212,8 +212,8 @@ After reasoning, provide a concise answer under the heading "Final Answer:".</pr
                 <p className="text-text-secondary mb-4">Have Gemini evaluate its own draft.</p>
                 
                 <h4 className="font-semibold text-text-primary mb-2">Template</h4>
-                <div className="bg-gray-100 p-4 rounded-lg mb-4 font-mono text-sm">
-                  <pre className="whitespace-pre-wrap">Below is my draft. First, list three weaknesses. Then rewrite the draft addressing those weaknesses.
+                <div className="bg-white/80 p-4 rounded-lg mb-4 font-mono text-sm">
+                  <pre className="whitespace-pre-wrap text-text-primary">Below is my draft. First, list three weaknesses. Then rewrite the draft addressing those weaknesses.
 
 Draft:
 ---
@@ -228,8 +228,8 @@ Draft:
                 <p className="text-text-secondary mb-4">Use for quick win discovery.</p>
                 
                 <h4 className="font-semibold text-text-primary mb-2">Template</h4>
-                <div className="bg-gray-100 p-4 rounded-lg mb-4 font-mono text-sm">
-                  <pre className="whitespace-pre-wrap">You are an AI consultant specialising in [DEPARTMENT] workflows.
+                <div className="bg-white/80 p-4 rounded-lg mb-4 font-mono text-sm">
+                  <pre className="whitespace-pre-wrap text-text-primary">You are an AI consultant specialising in [DEPARTMENT] workflows.
 
 Context:
 I manage [JOB DUTIES] at [COMPANY].
